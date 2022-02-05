@@ -1,0 +1,174 @@
+body {
+    caret-color: #8843d6;
+    background: linear-gradient(90deg, #4a138c, #a977e2);
+  }
+  
+  #todolist {
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+    
+  }
+  
+  .main_title {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+  }
+
+  .subtitle {
+      color: white;
+      text-align: center;
+      font-style:italic;
+      font-size:10px;
+  }
+
+  .quote_text {
+      text-align: center;
+      font-size: 12px;
+      color:rgb(255, 255, 255);
+      font-style: italic;
+      padding-top: 0px;
+      margin:0px 20px;
+      font-weight: 1000;
+  }
+  .quote_author {
+      text-align:right;
+      font-size: 12px;
+      margin-right: 6rem;
+      font-style: italic;
+      color:rgb(255, 255, 255);
+
+
+  }
+  
+  
+  .input_section {
+    margin: auto;
+  }
+  
+  .input_section form {
+    margin: 0px 70px 5px 100px;
+    align-items: center;
+    display: flex;
+  }
+  
+  .item {
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #fbe7c6;
+    padding: 0px 30px;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+  
+  .input_button {
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 60px;
+    margin-left: 5px;
+    color: white;
+    border: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 110px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.3s;
+    margin: 0px 100px;
+    font-size: 15px;
+  }
+  
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    margin: 8px 60px;
+    padding: 4px 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+  }
+  .close:hover {
+    background: #4a138c;
+    border-radius: 100%;
+    color: white;
+  }
+  
+  ul li.checked {
+    background: #ddd;
+    color: #8b879b;
+    text-decoration: line-through;
+    font-size: 15px;
+
+  }
+  
+  ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #272341;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 13px;
+    left: 80px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  
+  
+  @media screen and (max-width: 768px) {
+    body {
+      margin: 0;
+    }
+    #todolist {
+      max-width: 100%;
+    }
+  
+    .input_section form {
+      margin: 0px 30px 5px 30px;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .item {
+      width: 200px;
+      height: 30px;
+      border-radius: 15px;
+      border: 1px solid #fbe7c6;
+      padding: 0px 30px;
+    }
+  
+    .close {
+      position: absolute;
+      align-items: center;
+      text-align: center;
+      margin: 8px 15px;
+      padding: 4px 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0);
+    }
+  }
