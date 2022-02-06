@@ -1,6 +1,7 @@
 # Todolist_withQuote
 클론코딩을 통한 첫번째 프로젝트</br>
-:link: https://vibrant-stonebraker-5d3509.netlify.app/
+웹사이트 가기:link: https://vibrant-stonebraker-5d3509.netlify.app/</br>
+코드 설명 보기:link: https://false-leek-009.notion.site/ec6ce9e721ca46ec9d57b6d2eb37fe21
 
 목표: html,css,javascript를 이용한 웹 구현
 
