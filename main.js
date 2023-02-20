@@ -1,5 +1,7 @@
 'use strict';
 
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
 var itemList = [];
 var inputButton = document.querySelector(".input_button");
 inputButton.addEventListener("click", addItem);
@@ -12,7 +14,7 @@ document.querySelector(".item").addEventListener('keypress',function (e){
 
 function addItem() {
     var item = document.querySelector(".item").value;
-    if (item != null) {
+    if (item != "") {
         itemList.push(item);
         document.querySelector(".item").value = "";
         document.querySelector(".item").focus();
@@ -35,7 +37,6 @@ function showList() {
     for (var i = 0; i < devareButtons.length; i++) {
         devareButtons[i].addEventListener("click", devareItem);
     }
-
 }
 
 function devareItem() {
@@ -81,3 +82,23 @@ document.querySelector(".quote_author").innerHTML = quoteAuthor.innerText;
 function init(){
     getQuote();
 }
+
+let recognition = new SpeechRecognition();
+recognition.interimResults = true; // 중간 결과를 반환할지 여부
+recognition.lang = 'ko-KR';
+
+recognition.onresult = function(event) {
+    console.log(event.results)
+    var text = event.results[0][0].transcript;
+    console.log(text);
+    document.querySelector(".item").value = text;
+    document.querySelector(".item").focus();
+}
+
+recognition.onspeechend = () => {
+    recognition.stop();
+}
+
+document.querySelector(".voice_recog").addEventListener('click', function(){
+    recognition.start();
+});

@@ -48,11 +48,12 @@ body {
   
   
   .input_section {
-    margin: auto;
+    margin: 0px 100px 5px 140px;
+    align-items: center;
+    display: flex;
   }
   
   .input_section form {
-    margin: 0px 70px 5px 100px;
     align-items: center;
     display: flex;
   }
@@ -87,7 +88,7 @@ body {
   ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 110px;
+    padding: 12px 8px 12px 100px;
     background: #eee;
     font-size: 18px;
     transition: 0.3s;
@@ -135,6 +136,26 @@ body {
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
+  }
+
+  .buttonininput {
+    position: relative;
+  }
+
+  .item {
+    border: none;
+    padding: 0 15px;
+    height: 40px;
+  }
+  .voice_recog {
+    position: absolute;
+    top: 15%;
+    right: 5px;
+    border-radius: 50%;
+    background-color: lightgray;
+    border: none;
+    width: 30px;
+    height: 30px;
   }
 
   
