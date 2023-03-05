@@ -116,6 +116,20 @@ body {
     border-radius: 100%;
     color: white;
   }
+  .cor {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    align-items: center;
+    text-align: center;
+    margin: 8px 30px;
+    padding: 8px 8px;
+  }
+  .cor:hover {
+    background: #4a138c;
+    border-radius: 100%;
+    color: white;
+  }
   
   ul li.checked {
     background: #ddd;

@@ -27,15 +27,17 @@ function addItem() {
 function showList() {
     var list = "<ul>"
     for (var i = 0; i <itemList.length; i++) {
-        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "\u00D7" + "</span></li>";
+        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "\u00D7" + "</span><i class='fa-solid fa-pen cor'  id=" + i + ">" + "</i></li>";
     }
     list += "</ul>";
     document.querySelector(".item_list").innerHTML = list;
 
 
     var devareButtons = document.querySelectorAll(".close");
+    var corButtons = document.querySelectorAll(".cor");
     for (var i = 0; i < devareButtons.length; i++) {
         devareButtons[i].addEventListener("click", devareItem);
+        corButtons[i].addEventListener("click", correctItem);
     }
 }
 
@@ -45,6 +47,16 @@ function devareItem() {
     showList();
 }
 
+
+function correctItem() {
+    let text = prompt("수정할 내용을 입력하세요.");
+    if (text == null || text == "") {
+        return;
+    }
+    var id = this.getAttribute("id");
+    itemList[id] = text;
+    showList();
+}
 
 var checkList = document.querySelector('.item_list');
 checkList.addEventListener('click', event => {
