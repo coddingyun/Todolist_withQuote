@@ -1,13 +1,17 @@
-body {
+html, body {
     caret-color: #8843d6;
     background: linear-gradient(90deg, #4a138c, #a977e2);
+    height: 97%;
+    /*background: linear-gradient(90deg, #4a138c 33.333333%, #2d2d2d 33.333333%), linear-gradient(90deg, rgb(47, 47, 47) 66.666666%, #4a138c 66.666666%);*/
   }
   
   #todolist {
     text-align: left;
     max-width: 600px;
-    margin: auto;
-    
+    margin: 20px auto;
+    background-color: #313131;
+    height: 100%;
+    border-radius: 20px;
   }
   
   .main_title {
